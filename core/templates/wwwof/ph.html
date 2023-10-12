@@ -1,0 +1,164 @@
+{% include  'templateNoStyle.html'%}
+
+{% extends  "/wwwof/template.html"%}
+{% block content %}
+<!--
+
+mejor poco texto que ni yo lo leo
+
+y otros pelas se austan
+
+hecho para hacerme las tareas
+
+... deberia optimisarlo y corregir cositas
+-->
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="{{ url_for('static', filename='js/wwwof/CalcuPH/ph.js')}}"></script>
+
+<center>
+  <h1>CalcupH</h1>
+  <img src="http://wiki.unloquer.org/_media/personas/jero98772/calcuph.png" alt="calcuph" width="200" height="200"/>
+  <p>automatisacion de tareas escolares y calculadora proceosos quimicos en un acuario </p>
+  <p>version web y interfas web de <a href="https://github.com/jero98772/PHpythoncalcultator">codigo PHpythoncalcultator</a>  </p>
+</center>
+</center>
+<h3>para uso rapido seguir la siguintes instrucciones</h3>
+<h4>
+<p>en el menu desplegable puede verse *si es Ka o Kb :que se halla :con que se halla * y esos son los datos a ingresar</p>
+<p>Ka pertenece a acido</p>
+<p>Kb pertenece a bases</p>
+</h4>
+<table border="2">
+	<tr>
+		<td>H+	</td>
+		<th>un ion de Hidrogeno que genera acides en el agua </th>
+	</tr>
+	<tr>
+		<td>OH-	</td>
+		<th>un ion de oxigeno y hidrogeno que genera alcalinidad en el agua </th>
+	</tr>
+	<tr>
+		<td>pOH	</td>
+		<th>una medida de OH- </th>
+	</tr>
+	<tr>
+		<td>pH	</td>
+		<th>una medida de acides </th>
+	</tr>
+	<tr>
+		<td>henderson_hasselbalch</td>
+		<th>una genera solucion buffer que cambia el ph para mantenerlo estable </th>
+	</tr>
+</table>
+<form id="From1" name="From2" >
+Ka<input type="text" id="Ka">
+Kb<input type="text" id="Kb">
+moles<input type="text" id="moles">
+sal<input type="text" id="sal">
+<br>
+pOH<input type="text" id="pOH">
+pH<input type="text" id="pH">
+exponte exponte de Ka o Kb <input type="text" id="exponent">
+menu desplegable<select id="Select1" name="Select2">
+  <option type="text" id="PH" value="PH">Ka:PH :con Ka y moles</option>
+  <option type="text" id="POH" value="POH">Kb:POH :con Kb y moles</option>
+  <option type="text" id="H_mol" value="H_mol">Ka:H+ :con moles  y Ka </option>
+  <option type="text" id="OH_mol" value="OH_mol">Kb:OH- :con moles  y Ka</option>
+  <option type="text" id="H_pH" value="H_pH">Ka:H+ :con ph </option>
+  <option type="text" id="OH_pH" value="OH_pH">Kb:HO- :con ph</option>
+  <option type="text" id="OH_pOH" value="OH_pOH">Kb:OH-: con pOH</option>
+  <option type="text" id="henderson_hasselbalch" value="henderson_hasselbalch">Ka:henderson_hasselbalch</option>
+</select>
+</br>
+<input type="button" onclick ="calcuph()" value="calcular">
+</form>
+<p id="paso_0" ></p>
+<p id="multiple_0" ></p>
+<p id="paso_1" ></p>
+<p id="sqrt_1" ></p>
+<p id="paso_2" ></p>
+<p id="log_2" ></p>
+<p id="paso_3" ></p>
+<p id="pH_subtraction_3" ></p>
+<p id="paso_3.5" ></p>
+<p id="h_o_oh_3.5" ></p>
+<p id="paso_4" ></p>
+<p id="acid_or_base" ></p>
+<p id="paso_5" ></p>
+<p id="verificar" ></p>
+<!--
+  se bloque si es algo como 10**10**10
+en el programa  no puede ser tan largo el el numero ,  solo el aplicarle el numero  necesario porque sino no procesa la informacion necesaria y se bloquea  o trabajara mal el algoritmo
+
+ <table border="2">
+ <tr>
+    <th>donde no va el valor</th>
+    <td>limite del valor</td>
+  </tr>
+  <tr>
+    <th>exponte</th>
+    <td>-323 o 323</td>
+  </tr>
+  <tr>
+    <th>moles</th>
+    <td>1</td>
+  </tr>
+  <tr>
+  	<th>ka o kb</th>
+    <td>10</td>
+  </tr>
+</table>
+
+<p><h2>notas</h2></p>
+<p>no todas las Kb y Ka estan hay en esas tablas</p>
+<p>no es necesario poner notacion cientificas para eso esta el input exponete</p>
+
+<p><h3>notas para el progrmador </h3></p>
+<p>*el codigo esta escrito en ingles-español (pero el lenguaje de programacion es  javascript) pero para se va terminar en ingles corrigiendo algunas palabras como pasos</p>
+<p>*para optimizar algoritmos y trabajar en  todos los casos menos un caso son generales  con la mayoria de los </p>
+<p>algoritmos asi que si dentro del procedimiento puede que se repite el valor de respuesta en el procedimiento y es por</p>
+<p>la programacion y por el algoritmo general pero esto se va corregir</p>
+-->
+<!--o por lo menos eso quiero ... corregirlo -->
+<!--
+<p>repite el valor de respueta en el procedimiento y es por la progrmacion</p>
+<p>*las tablas con Ka y Kb  son una foto para hacer  mas rapido, mas el  </p>
+<p> proceso programacion y menos duro el trabajo y menos el proceso de transcribir </p>
+</br>
+-->
+<!--
+huy tascribir todo eso que peresa y aburricion
+-->
+<p><h3>tablas de informacion con ka y Kb algunas ka y kb</h3></p>
+<!--
+<img src="img/acido_o_base_furte.jpg"></br>
+<img src="img/tabla13.jpg"></br>
+<img src="img/tabla14.jpg"></br>
+<img style="transform:rotate(90deg); width:700px; height:700px;" src="img/tabla15.jpg" ></br>
+-->
+<img src="{{ url_for('static', filename='img/wwwof/ph/k.png')}}">
+<p><h3>usos</h3></p>
+<p>Para todo lo que ustded quiera y le encuentre uso.</p>
+<p>Me sirvio para que me hiciera mis tareas de quimica en la escuela</p>
+<!--
+<p>hacer tareas mediante este algoritmo o programa</p>
+<p>y el uso que le encuentres</p>
+<p><h2>usar el progrma</h2></p>
+<p><h3>si es para hallar pH</h3></p>
+<p>introduce la cantidad de moles necesarias por (ahora va ser si el ejercicio las da y no toca calcularlas)  </p>
+<p>introduce la cantidad de Ka si te piden de una sustancia específica en las tablas puedes encontrar la Ka   </p>
+<p><h3>si es para hallar pOH</h3></p>
+<p>introduce la cantidad de moles necesarias por (ahora va ser si el ejercicio las da y no toca calcularlas) ) </p>
+<p>introduce la cantidad de Kb si te piden de una sustancia específica en las tablas puedes encontrar la Kb   </p>
+<p><h3>si es para hallar H</h3></p>
+<p>para hallar H hay varios casos 1 H+ con moles , 2H+ con ph 3 para hallar H+ siempre se tiene ph en mi</p>
+<p>programa  con moles se halla el ph  y también hay que introducir la Ka y H+ con ph solo se introduce el ph </p>
+<p><h3>si es para hallar OH</h3></p>
+<p>para hallar OH hay varios casos 1 OH- con moles , 2 OH- con ph y 3 con poh</p>
+<p>para hallar OH- siempre se tiene ph en mi programa  con moles se halla el ph</p>
+</p>y también hay que introducir la Ka y OH- con</p>
+<p>ph solo se introduce el ph y con el poh se resta a 14 para obtener ph y se exponencia 10 elevado ph y se obtiene OH-</p>
+-->
+  {% endblock %}
+
+

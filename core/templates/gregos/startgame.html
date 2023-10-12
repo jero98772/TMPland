@@ -1,0 +1,48 @@
+{% extends  'gregos/template.html'%}
+{% block content %}
+<style>
+    .ascii-banner {
+        font-family: monospace;
+        font-size: 16px;
+        white-space: pre;
+        border: 1px solid #ccc;
+        padding: 10px;
+        background-color: #f9f9f9;
+    }
+</style>
+<center>
+    <div class="container">
+        <pre class="ascii-banner">
+            {{ banner }}
+        </pre>
+    </div>
+	<form method="post" >
+		<h2>Chose you color</h2>
+		<select name="color">
+			<option>White</option>
+			<option>Black</option>
+		</select>
+		<h2>Chose game mode</h2>
+		<select name="mode">
+			<option>Player vs Machine</option>
+		</select>
+		<br>
+		<h2>Artificial inteligence level</h2>
+		<select name="level">
+			{% for i in range(1,3)%}
+				<option>{{ i }}</option>
+			{% endfor %}
+		</select>
+		<h2>langue</h2>
+		<select name="langue">
+				<option>english</option>
+				<option>español</option>
+				<option>deutsch</option>
+				<option>russian</option>
+		</select>
+		<br>
+		<br>
+		<input type="submit" value="Play">
+	</form>
+</center>
+{% endblock  %}

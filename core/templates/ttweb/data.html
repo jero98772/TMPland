@@ -1,0 +1,15 @@
+{% extends  'ttweb/template.html'%}
+{% block content %} 
+{% if session['loged'] %}
+	{% for i in data %}
+	<b>
+	<pre>
+		{{ i }}
+	</pre></b>
+	{% endfor %}
+{% else %}
+<div class="alert alert-danger" role="alert">
+	<h1>You need to be registered!</h1>
+</div>
+{% endif %}
+{% endblock %}

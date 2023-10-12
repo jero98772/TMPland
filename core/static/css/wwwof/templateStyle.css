@@ -1,0 +1,56 @@
+body {
+	background-color: rgba(10,100,200,0.5);
+}
+* {
+	margin:0px;
+	padding:0px;
+}
+
+
+#header {
+	margin:auto;
+	width:100%;
+	font-size: 14px;
+
+}
+/*este es esto no mas*/
+ul, ol {
+	list-style:none;
+}
+
+.bar > li {
+	float:left;
+}
+
+.bar li a {
+	background-color:rgb(0,0,155,0.7);
+	color:white;
+	text-decoration:none;
+	padding:10px 13.9px;
+	display:block;
+}
+
+.bar li a:hover {
+	background-color:rgb(0,0,155,0.5);;
+}
+
+.bar li ul {
+	display:none;
+	position:absolute;
+	min-width:140px;
+}
+
+.bar li:hover > ul {
+	display:block;
+}
+
+.bar li ul li {
+	position:relative;
+}
+
+.bar li ul li ul {
+	right:-140px;
+
+	top:0px;
+}
+/* i dont wait this work how i like */

@@ -1,0 +1,66 @@
+{% extends 'template.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">My Cryptography Tools</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <h3 class="card-title">RSA Encryption/Decryption</h3>
+                    <p class="card-text">Encrypt and decrypt messages using RSA.</p>
+                    <a href="/projects/arreBatEro/rsa.html" class="btn btn-primary btn-block">Access RSA Tool</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <h3 class="card-title">Phone Code</h3>
+                    <p class="card-text">Encode and decode using a phone code.</p>
+                    <a href="/projects/arreBatEro/criptophone.html" class="btn btn-primary btn-block">Access Phone Code Tool</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-4">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <h3 class="card-title">ASCII Art from Image</h3>
+                    <p class="card-text">Convert images to ASCII art.</p>
+                    <a href="/projects/arreBatEro/asciiart2image.html" class="btn btn-primary btn-block">Access ASCII Art Tool</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <h3 class="card-title">Caesar Cipher</h3>
+                    <p class="card-text">Encrypt and decrypt messages using the Caesar cipher.</p>
+                    <a href="/projects/arreBatEro/caesarcipher.html" class="btn btn-primary btn-block">Access Caesar Cipher Tool</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-4">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <h3 class="card-title">SHA-256 Hash</h3>
+                    <p class="card-text">Generate SHA-256 hashes for input data.</p>
+                    <a href="/projects/arreBatEro/sha256.html" class="btn btn-primary btn-block">Access SHA-256 Tool</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add more tools here as needed -->
+    </div>
+</div>
+
+<style>
+    .custom-card {
+        background-color: #f0f0f0; /* Set a consistent background color */
+        margin: 20px 0;
+        text-align: center;
+    }
+</style>
+{% endblock %}

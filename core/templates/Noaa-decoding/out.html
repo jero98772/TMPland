@@ -1,0 +1,8 @@
+{% extends 'template.html' %}
+{% block content %}
+<div class="container text-center">
+    <h1 class="display-4 mt-5">NOAA Signal Processing</h1>
+    <hr class="my-4">
+    <img src="{{ url_for('static', filename=name)}}" class="img-fluid mt-4" alt="Processed Image">
+</div>
+{% endblock %}

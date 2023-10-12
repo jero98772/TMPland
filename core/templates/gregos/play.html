@@ -1,0 +1,36 @@
+{% extends  'gregos/template.html'%}
+{% block content %}
+<center>
+	<form method="post">
+		<img style="width: 35%;heigh: 35%;" src="{{ url_for('static', filename='img/gregos/tmp.svg')}}">
+		<!-- i need show previus move for give the feedback of the other move, if player move show gregos move and otherwise-->
+		<!-- organize in a table-->
+		{% if gregos_turn %}
+			<p>Gregos {{ trad.recomend_you }} </p>
+				{{ gregos_move | safe }}
+		{% else %}
+			<p>Gregos {{ trad.move }}</p>
+				{{ gregos_move | safe }}
+		{% endif %}
+		<br>
+		{{ win_probability }}
+		<br>
+		{{ opening }}
+		<br>
+		{% if gregos_turn %}
+			<input type="submit" value="{{ trad.next }}">
+		{% else %}
+			<input type="submit" value="{{ trad.play }}">
+			<p>{{ trad.Available_moves }}</p>
+			<select name="move">
+				{% for i in moves %}
+					<option> {{ i }}</option>
+				{% endfor %}
+			</select>
+		{% endif %}
+
+
+		</table>
+	</form>
+</center>
+{% endblock  %}

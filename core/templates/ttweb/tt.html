@@ -1,0 +1,27 @@
+{% extends  'ttweb/template.html'%}
+{% block content %} 
+{% if session['loged'] %}
+<form  method="POST">
+	<center>
+		<div>
+			<h1>Add register</h1>
+			<table>
+				{% if session['status'] %}
+				<tr><input type="text" name="category" value="{{ data }}"></tr>
+				<tr>
+					<th><button type="submmit" class="btn btn-primary" value="Start">Start</button></th>
+				</tr>
+				{% else %}
+				<tr>{{ data }}</tr>
+				<tr>
+					<th><button type="submmit" class="btn btn-primary" value="Stop">Stop</button></th>
+				</tr>
+				{% endif %}
+			</table>
+		</div>
+	</center>
+</form>
+{% else %}
+<h1>Bla bla</h1>
+{% endif %}
+{% endblock %}

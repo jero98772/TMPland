@@ -1,0 +1,40 @@
+{% extends 'template.html' %}
+{% block content %}
+<!-- ======= Hero Section ======= -->
+<section id="index" class="hero d-flex align-items-center section-bg">
+    <div class="container">
+        <!-- Hero content goes here if needed -->
+    </div>
+</section><!-- End Hero Section -->
+<style>
+    .table-header {
+        color: #00FF00; /* Green color */
+    }
+</style>
+
+<main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="projects" class="about">
+        <div class="container" data-aos="fade-up">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="table-header"> # </th>
+                        <th scope="col" class="table-header"> Name </th>
+                        <th scope="col" class="table-header"> Code </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in projects %}
+                    <tr>
+                        <th scope="row">{{ loop.index }}</th>
+                        <td><a href="/projects/{{ i }}">{{ i }}</a></td>
+                        <td><a href="https://github.com/jero98772/{{ i }}">github</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section><!-- End About Section -->
+</main>
+{% endblock %}

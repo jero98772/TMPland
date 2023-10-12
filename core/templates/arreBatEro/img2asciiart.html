@@ -1,0 +1,68 @@
+{% extends 'template.html' %}
+{% block content %}
+<script type="text/javascript">
+	document.getElementById("debugBtn").addEventListener('click', function () {debug.hidden = !debug.hidden;}, false);
+</script>
+<form method="post"  enctype="multipart/form-data" >
+<div class="codeIt">
+<br>
+<h1> img2ascii like art</h1>
+<table>
+	<tr>
+		<td>char to fill figure</td>
+		<td>char to fill empty space</td>
+		<td>Value for replace </td>
+		<td>intensity </td>
+		<td>size of matrix of </td>
+	</tr>
+	<tr>
+		<td>
+			<input type="text" name="fillItem"  value="{{ defaultvalues.0 }}">
+		</td>
+		<td>
+			<input type="text" name="noFillItem"  value="{{ defaultvalues.1 }}"> 
+		</td>
+		<td>
+			<input type="text" name="replaceValue" value="{{ defaultvalues.2 }}">
+		</td>
+		<td>
+			<input type="text" name="intensity" value="{{ defaultvalues.3 }}">
+		</td>
+		<td>
+			<input type="text" name="size" value="{{ size }}">
+		</td>
+	</tr>
+</table>
+<h1>image file to convert to ascii</h1> 
+<table>
+	<tr>
+		<th>image file</th>
+		<th>image url</th>
+	<tr></tr>
+		<td><input type="file" name="imgfile"  id="inputimge" autocomplete="off"  style="width: 300%"></td>
+		<td><input type="text" name="url"></td>
+	</tr>
+	<tr>
+		<td><input type="radio" id="file" name="image" value="file"></td>
+		<td><input type="radio" id="url" name="image" value="url">
+</td>
+	</tr>	
+</table>
+<input type="submit" name="">
+<br>
+	<h1>notes</h1>
+<p> max size = 100</p> 
+<br>
+what is intensity and Value for replace ? that is
+<p>[Value of pixel//intensity == Value] <b>PLEASE CHECK THIS , MAYBE HELP </b></p>
+<br>
+<p>url not allowed now </p>
+<br>
+<div class="codeIt">
+<pre>
+{{  out.1 }}
+</pre>
+</div>
+</form>
+</div>
+ {% endblock  %}

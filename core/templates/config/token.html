@@ -1,0 +1,25 @@
+{% extends  'template.html'%}
+{% block content %}
+{% if session['loged'] %}
+<form method="post" >
+<center>
+	<h1>	
+		Token	
+	</h1>
+</center>
+<hr>
+<h3>generate new token</h3>
+<input type="submit" name="new Token" value="new Token">
+
+<h3>generate custom token</h3>
+<input type="text" name="customTokenValue">
+<br>
+<input type="submit" name="custom Token" value="custom Token">
+<br>
+</form>
+{% else %}
+<h1>please get loged!!</h1>
+<p>error: you cannot perform this operation unless you are root.</p>
+<p> please get loged with your token!!</p>
+{% endif %}
+{% endblock %}

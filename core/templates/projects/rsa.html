@@ -1,0 +1,77 @@
+{% extends  'proyects/template.html'%}
+{% block content %}
+<meta charset="UTF-8"> 
+<form method="post" >
+<div class="codeIt">
+	<div>
+		<center>
+			<p style="font-size: 50px">criptools is not gpgforall</p>
+			<h1>keys and paswords not be recovery and no be stroge </h1>
+			<hr>
+			<h1>Rsa</h1>
+			<h2>text to encript/decript with rsa</h2>
+			<input type="text" name="text" value=""  style="width: 90%" >
+			<br>
+			<table>
+			<tr>
+				<td>
+					<label>you wanna?</label>	
+				</td>
+				<td>
+					<label>n ,product of that primes numbers</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<select name="encordec" style="width: 100%" >
+						<option>encript,with key</option>
+						<option>decript,with key</option>
+						<option>encript,with primes numbers</option>
+						<option>decript,with primes numbers</option>
+					</select>  
+				</td>
+				<td>
+					<input type="text" name="n" value="{{ n }}"  style="width: 100%" >
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>private key</label>
+				</td>
+				<td>
+					<label>public key</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" name="private" value="{{ private }}"  style="width: 100%" >
+				</td>
+				<td>
+					<input type="text" name="public" value="{{ public }}"  style="width: 100%" > 
+				</td>
+			</tr>
+			<tr>
+			<tr>
+				<td colpan="2"> if you like primes numbers</td>
+			</tr>
+				<td>prime1</td>
+				<td>prime2</td>
+			</tr>
+			<tr>
+				<td><input type="text" name="prime1" value="{{primes.0}}"></td>
+				<td><input type="text" name="prime2" value="{{primes.1}}" ></td>
+			</tr>
+			</table>
+			<br>
+			<br>
+			<h1>{{out}}</h1>
+		</center> 
+		<br>
+		<br>
+		<center>
+				<input type="submit" name="">
+		</center>
+	</div>
+</div>
+</form>
+{% endblock %}

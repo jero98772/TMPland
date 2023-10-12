@@ -1,0 +1,52 @@
+{% include  'templateNoStyle.html'%}
+
+{% extends "/wwwof/template.html" %}
+{% block content%}
+<meta charset="utf-8">
+<title>p5.js example</title>
+<style> body {padding: 0; margin: 0;} </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--script src="{{ url_for('static', filename='www_of/js/libraris/p5/p5.min.js')}}"></script>
+<script src="{{ url_for('static', filename='www_of/js/libraris/p5/addons/p5.dom.min.js')}}"></script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.0/p5.js" integrity="sha256-06BMLzEz/H5XPiFSyP2MjdNIrDV9Z4woSTO/K0sqKi0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.0/p5.min.js" integrity="sha256-CwZPX44X9VxXbhmoN2vi9HX2txOvx+lemuTXYqIspAs=" crossorigin="anonymous"></script>
+<center>
+<script type="text/javascript" src="{{ url_for('static', filename='js/wwwof/divePC/PC.js')}}">	
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/wwwof/divePC/divePC.js')}}">
+</script>
+</center>
+<meta charset="UTF-8"> 
+<h1>divePC </h1>
+<p> <h3>is computer in fish tank with with good look like</h3></p>
+this is computer in fishtank can have fish and water dont recomend make this with other materials or damaged materials
+<ol>
+	<li>fisured fishtanks  or without disvion betewn water and mineral oil
+</li>
+	<li>different mineral oil not is a oil common
+</li>
+	<li>bad desigded circuit 
+</li>
+	<li></li>
+fisured fishtanks  or without disvion betewn water and mineral oil
+different mineral oil not is a oil common
+bad desigded circuit 
+</ol>
+<b>mineraloil is a explosive <a href=" http://www.inchem.org/documents/icsc/icsc/eics1597.htm">propietis of mineraloil oil</a></b>
+<br>
+recommendations
+<br>
+test the oil with other circuits such as an arduino (one that responds with a sound led motor, etc.)
+<br>
+<br>
+<img src="http://wiki.unloquer.org/_media/personas/jero98772/divepc2.png" alt="divepc" width="200" height="200"/>
+<br>
+<img src="{{ url_for('static', filename='img/wwwof/divePC/espoil.jpg')}}" width="500" height="500">
+<br>
+<img src="{{ url_for('static', filename='img/wwwof/divePC/rpioil.jpg')}}" width="500" height="500">
+<iframe width="825" height="500" src="https://www.youtube.com/embed/0ZrXwq5MHB0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</br>
+<iframe width="660" height="350" src="https://www.youtube.com/embed/_hT_zreeG8s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="660" height="350" src="https://www.youtube.com/embed/tqku9z-Wesg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends  'ttweb/template.html'%}
+{% block content %} 
+{% if session['loged'] %}
+	<h1>
+		You are Loged
+		you need <a href="/projects/tt/unlog">unlog?</a>
+	</h1>
+{% else %}
+<center>
+<h1>ttweb</h1>
+<h2>login</h2>
+for test can login with
+<br>
+<h5><b>Username:<b>test     <b>Pasword:</b>test</h5>
+<br>
+<br>
+<form method="POST">
+<input type="username" name="username" placeholder="Username">
+<input type="password" name="password" placeholder="Password">
+<input type="submit" value="Login">
+</form>
+you dont have account?<a href="/register">create your account</a>
+</center>
+{% endif %}
+{% endblock  %}

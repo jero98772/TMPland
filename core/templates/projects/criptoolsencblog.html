@@ -1,0 +1,52 @@
+{% extends  'proyects/template.html'%}
+{% block content %}
+<h1>
+	criptoolsencblog<br>	
+	tell us a protect secret 
+</h1>
+<form method="post">
+<table>
+	<tr>
+		<td>*secret</td>
+		<td>public mensage about secret </td>
+		<td>*like to be public?</td>
+		<td>key for secret</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="text" name="secret" required>	
+		</td>
+		<td>
+			<input type="text" name="mensage"> 
+		</td>
+		<td>
+			<select name="ispublic" required>
+				<option>yes</option>
+				<option>no</option>
+			</select>
+		</td>
+		<td>
+			<input type="text" name="key" value="{{keypass}}" > 
+		</td>
+	</tr>
+</table>
+<input type="submit">
+<table border="2">
+	<tr>
+		<td><b>mensage</b></td>
+		<td><b>public reference</b></td>
+	</tr>
+{% for i in data %}	
+	<tr>
+		<td>
+			{{i.0}}
+		</td>
+		<td>
+			{{i.1}}
+		</td>
+	</tr>
+{% endfor %}
+</table>
+</form>
+
+{% endblock %}

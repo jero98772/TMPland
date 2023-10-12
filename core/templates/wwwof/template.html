@@ -1,0 +1,81 @@
+{%set wwwof = "/projects/wwwof/"%}
+{%set howproyects = "/wwwof/howproyects/"%}
+
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Word Wide Web of Fish</title>
+</head>
+<body>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/wwwof/templateStyle.css')}}">
+
+<center>
+		<div id="header">
+		<ul class="bar">
+			<li><a href="{{wwwof}}">main menu</a></li>
+				<li><a href=""> Proyects  </a>
+					<ul>
+						<li><a href="{{wwwof}}calcupH.html">calcuPH</a> </li>
+						<li><a href="{{wwwof}}drawFISHTANK.html">drawFISHTANK</a></li>
+						<li><a href="{{wwwof}}divePC.html">divePC</a></li>
+
+						<li><a href="{{wwwof}}" onclick="alert('you are now in wwwof')">WWWoF</a></li>
+					</ul>
+				</li>
+				<li><a href="">source  </a>
+					<ul>
+						<li><a href="https://github.com/jero98772/calcupH_js">calcuPH</a> </li>
+						<li><a href="https://github.com/jero98772/dibujo_acuario_p5js">drawFISHTANK</a></li>
+						<li><a href="http://wiki.unloquer.org/personas/jero98772/requeriminetos-para-semihacker/proyectos-sueltos/wwwof/divepc/start">divePC</a></li>
+						<li><a href="https://github.com/jero98772/curapeces">curapeces</a></li>
+					<!--li><a href="bechmarck.html">bechmarck</a></li-->
+						<!--li><a href="https://github.com/jero98772/wwwofish">divePC</a></li-->
+						<li><a href="https://github.com/jero98772/wwwofish">WWWOF</a></li>
+					</ul>
+				</li>
+
+				<li><a href="">word wide web of fish is freesoftware</a>
+					<ul>
+						<li onclick="alert('fix')"><a>have problems? </a> </li>
+
+						<li onclick="alert('conviertelo como te gusta')"><a>ves algo que no te gusta?</a></li>
+
+						<li onclick="alert('conviertelo rapido ya sea optimisandolo donando para  equipo y corriendo el codigo etc')"><a>muy lento? </a></li>
+						<li onclick="alert('agregaselo')"><a> le falta algo?</a></li>
+						<li onclick="alert('ayuda')"><a>quiero ayudar</a></li>
+						<li onclick="alert('como quieras y puedas hay esta la planeacion')"><a>como puedo ayudar?</a></li>
+						<li onclick=" alert('	soon In other languages ,i made possible by speak spanish can you imagine in other language ,can you    translate it or use https://translate.google.com/')"><a>I do not speak Spanish </a></li>
+						<li onclick="alert('ponlo a funcionar')"> <a>no funciona </a></li>
+						<li onclick="alert('HAZLO/do it ')"><a>  no digas que vas a hacer .../ don't say what are you going to do"</a></li>
+						<li onclick="alert('se soluciona')"><a>dañe algo</a></li>
+						<li><a href="/www_of/why.html">because it's done like this</a></li>
+						<li><a href="/www_of/porque.html">porque esta hecho asi</a></li>
+					</ul>
+				</li>
+
+
+			</ul>
+
+		</div>
+	</center>
+	<br>
+	<br>
+	<br>
+	<br>
+
+{% block content %}
+
+{% endblock %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+</body>
+</html>

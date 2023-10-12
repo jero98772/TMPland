@@ -1,0 +1,58 @@
+{% include  'templateNoStyle.html'%}
+
+{% extends  "/wwwof/template.html"%}
+{% block content %}
+
+<center><p style="font-size:40px">word wide web of fish </p><b><h2>word wide web of fish</h2><b></center>
+<img src="http://wiki.unloquer.org/_media/personas/jero98772/2021-02-24-145222_225x175_scrot.png" alt="drawfishtnak" width="200" height="200"/>
+<style type="text/css">
+	body
+	{
+	background-image: url(https://ep01.epimg.net/elpais/imagenes/2018/04/02/mundo_animal/1522660801_641774_1522662021_noticia_normal.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+</style>
+
+<!--script type="text/javascript" charset="utf-8" src="libraris/p5/p5.min.js">		
+</script>
+<script type="text/javascript" charset="utf-8" src="libraris/p5/addons/p5.dom.min.js">
+</script-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.0/p5.js" integrity="sha256-06BMLzEz/H5XPiFSyP2MjdNIrDV9Z4woSTO/K0sqKi0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.0/p5.min.js" integrity="sha256-CwZPX44X9VxXbhmoN2vi9HX2txOvx+lemuTXYqIspAs=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/wwwof/drawFISHTANK/drawFISHTANK.js')}}">
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/wwwof/drawFISHTANK/FISHTANK.js')}}">
+</script>
+<meta charset="UTF-8"> 
+<p id="figura"> figura<p>
+<form id="From1" name="From1" >
+
+<p id="lado01">lado 1<p>
+<input type="text" id="entrada_lado_1" value="1" >
+
+<p id="lado02">side 2<p>
+<input type="text" id="entrada_lado_2"  value="1">
+
+<p id="lado03">side 3<p>
+<input type="text" id="entrada_lado_3"  value="1">
+
+<br>
+<select id="Selecion1" name="Selecion1">
+  <option id="prisma_rectangular " value="rectagle">rectagle</option>
+  <option id="cubica" value="cubic">cubic</option>
+ <!--<option id="fishtank_classic" value="fishtank_classic">fishtank_classic</option>-->
+  <option id="prisma_triangular " value="triangle">trianglar prism</option>
+  <option id="cilindro" value="cilinder">cilinder</option>
+</select>
+<br><br>
+<input type="button" onclick="setInterval(draw,500)"  value="calculate">
+<p id="parrafo" ></p>
+</form>
+<!--
+
+
+units  liters (L), centimeters (cm) 
+
+{% endblock %}

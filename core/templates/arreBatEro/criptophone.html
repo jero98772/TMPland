@@ -1,0 +1,24 @@
+{% extends 'template.html' %}
+{% block content %}
+<center>
+<h1>
+	critophone
+</h1>
+<form method="post" >
+	<div class="codeIt">
+		<h2>hidden message like a phone...</h2>
+	    <p>idea from cripto<a href="https://morada.co/">morada</a></p>
+		<br>
+		message for hidden like a phone
+		<input type="text" name="message">
+		<select name="option">
+			<option>encode</option>
+			<option>decode</option>
+		</select>
+		<input type="submit">
+	<div class="codeIt">
+	<div>{{ out }}</div>
+	</div>
+</form>
+</center>
+{% endblock %}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~8.8.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "latitude": 6.256405968932449,
+    "longitude": -75.59835591123756,
+    "pitch": 40,
+    "zoom": 12
+  },
+  "layers": [
+    {
+      "@@type": "ScatterplotLayer",
+      "autoHighlight": true,
+      "data": [
+        {
+          "lat": -26.77250917814439,
+          "lng": -69.51007314980598
+        },
+        {
+          "lat": -179.80728674421619,
+          "lng": -62.151716698717905
+        },
+        {
+          "lat": 90.58910800264601,
+          "lng": -53.712735045327804
+        },
+        {
+          "lat": 54.45083005195798,
+          "lng": -67.71107912741374
+        },
+        {
+          "lat": 28.244543828062092,
+          "lng": 38.43822619503413
+        },
+        {
+          "lat": 150.74952848713707,
+          "lng": 37.24847186147365
+        },
+        {
+          "lat": -85.96139681243851,
+          "lng": -20.53422305084709
+        },
+        {
+          "lat": -155.5966822661182,
+          "lng": -60.62629409728158
+        },
+        {
+          "lat": 111.8412223264587,
+          "lng": 69.55438095668248
+        },
+        {
+          "lat": 157.9806674248814,
+          "lng": -34.71895521558951
+        }
+      ],
+      "getFillColor": "@@=[180, 0, 200, 140]",
+      "getPosition": "@@=[lng, lat]",
+      "getRadius": 1000,
+      "id": "1f650e3b-71da-4646-88e9-eca193c1f79b",
+      "pickable": true
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = true;
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>

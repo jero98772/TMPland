@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+</head>
+<body>
+{% include  'templateNoStyle.html'%}
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/gas/gasStyle.css')}}">
+
+<ul class="bar">
+			<li><a href="/projects/GAS/">INFO</a></li>
+			<li><a href="/projects/GAS/user_register.html">Create user</a></li>
+			<li><a href="/projects/GAS/gas.html">Login</a></li>
+
+</ul>
+<br>
+<br>
+<br>		
+{% block content %}
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,64 @@
+{% extends 'ttweb/template.html' %}
+{% block content %}
+{% if session['loged'] %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1 class="text-center">Add Register</h1>
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Input of Register</h2>
+                    <form method="POST">
+                        {% if session['status'] %}
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="category" placeholder="Activity:Subactivity">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Start</button>
+                        {% else %}
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="category" placeholder="Activity:Subactivity" disabled>
+                        </div>
+                        <h3>{{ data }}</h3>
+                        <button type="submit" class="btn btn-secondary btn-lg btn-block">Stop</button>
+                        {% endif %}
+                    </form>
+                </div>
+                
+                <!-- Timing Display -->
+                <div class="card-body">
+                    <h2 class="card-title">Timing</h2>
+                    <div class="timing-output">
+                        {% for i in datafile %}
+                            <div class="timing-entry">
+                                <span class="time">{{ i.split(' ')[0] }}</span>
+                                <span class="activity">{{ i.split(' ')[1:]|join(' ') }}</span>
+                            </div>
+                        {% endfor %}
+                        <hr>
+                        <div class="total-time">
+                            <span>Total Time:</span>
+                            <span>{{ datafile[-1] }}</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Timing Display -->
+
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="container mt-5 text-center">
+    <h1>ttwb</h1>
+    <h2>tt</h2>
+    <p>
+        <a href="https://github.com/son0p/scriptson0p/blob/main/bash/tt">tt</a> is a bash script that uses ledger for time counting in different activities and subactivities.
+    </p>
+    <p>ttweb is a web interface for tt that can handle multiple users.</p>
+    <div class="alert alert-warning" role="alert">
+        <h1>You need to be registered!</h1>
+    </div>
+    <a href="">Register</a>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends  'proyects/template.html'%}
+{% block content %}
+<style type="text/css">
+.codeIt{
+	background-color: rgba(0,0,0,0.5);
+	width: 90%;
+	height: auto;
+	margin: auto;
+	border:  5px solid rgba(0,0,0,0.7);
+	font-size: 15px;
+	line-height: auto;
+
+}
+</style>
+<form method="post" >
+<meta charset="UTF-8"> 
+<center><p style="font-size: 50px">criptools is not gpgforall</p></center>
+<center><h1>keys and paswords not be recovery and no be stroge </h1></center>
+	<div class="codeIt">
+		<input type="submit" name="">
+		<center>
+			<h1>
+				cesar
+			</h1>
+			<hr>
+		</center>
+			<div>
+				<center>
+					<p><h2>cifrate/desifate a mesage with cesar</h2></p>
+				</center>
+				cifrate/descifrate text
+				<input type="text" name="cesartext" style="width: 70%"  value=""> <br>
+				key [defalt is random]
+				<input type="text" name="key" value="{{htmlkey}}"style="width: 70%">  <br>
+				<label>you need cifrate/desifrate</label>
+				<select name="optioncesar">
+					<option>cifrate</option>
+					<option>desifrate</option>
+				</select>
+				<br>
+				if you need change chars
+				<input type="text" name="chars" style="width: 70%" value="{{htmlchars}}">  
+				<br>
+				result be
+				<h1>{{ resulthtml }}</h1>
+
+ 			</div>
+	</div>
+
+ </form>
+{% endblock %}
