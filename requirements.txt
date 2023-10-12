@@ -1,0 +1,10 @@
+flask
+Crypto
+pycryptodome
+numpy
+chess 
+matplotlib
+pandas
+pydeck
+networkx
+scipy
