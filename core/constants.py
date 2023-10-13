@@ -34,6 +34,7 @@ except:
 	os.mkdir(BLOGPATH)
 BLOGSFILES = filesInFolders(BLOGPATH)
 SUPORTEDLANGUAGES = ["No translate","spanish","english","german","basque","italian","russian"]
+SUPORTEDLANGUAGESSEAMLESS={"german":"deu","english":"eng","spanish":"spa","russian":"rus"}
 if os.path.isfile(BLOGFILE):
 	try:
 		from .blogs import blogs 

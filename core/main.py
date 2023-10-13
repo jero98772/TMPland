@@ -51,8 +51,14 @@ class webpage:
 						else:
 							transalateTo = file[:-5]
 					else:
-						txtp_translated = webTranslate(txtp,mainLangue,transalateTo)
-						txtq_translated = webTranslate(txtq,mainLangue,transalateTo)
+						print(mainLangue,transalateTo)
+						if mainLangue in SUPORTEDLANGUAGESSEAMLESS:
+							print("test")
+							txtp_translated = translateseamless(txtp,SUPORTEDLANGUAGESSEAMLESS[mainLangue],SUPORTEDLANGUAGESSEAMLESS[transalateTo])
+							txtq_translated = translateseamless(txtq,SUPORTEDLANGUAGESSEAMLESS[mainLangue],SUPORTEDLANGUAGESSEAMLESS[transalateTo])
+						else:
+							txtp_translated = webTranslate(txtp,mainLangue,transalateTo)
+							txtq_translated = webTranslate(txtq,mainLangue,transalateTo)
 						content = doHtml(txtp_translated,txtq_translated,txtid,AUTHOR)
 						writeblog(BLOGPATH+name+"/"+transalateTo+".html",content)
 				else:

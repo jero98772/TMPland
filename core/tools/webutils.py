@@ -18,6 +18,16 @@ def writeTxt(name,content,option = "a"):
 	with open(name, option) as file:
 		file.write(content)
 		file.close()
+def translateseamless(text,source,destiny):
+	from seamless_communication.models.inference import Translator
+	import torch 
+	translator = Translator(
+    		"seamlessM4T_large",
+    		"vocoder_36langs",
+    		torch.device("cuda:0")
+	)
+	translated_text, _, _ = translator.predict(text, "t2tt", destiny, src_lang=source)
+	return translated_text
 def changeThis(name,old,new,option = "ab+",replaceTo="<!--this-->"):
 	oldString = replaceTo+old+replaceTo
 	newString = replaceTo+new+replaceTo
