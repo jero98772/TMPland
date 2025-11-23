@@ -30,11 +30,14 @@ USE = readLine(WHATISFILE)
 BLOGINDEX="/blog.html"
 try:
 	BLOGS = blogNames(BLOGPATH)
+	print(BLOGS)
 except:
 	os.mkdir(BLOGPATH)
+
 BLOGSFILES = filesInFolders(BLOGPATH)
 SUPORTEDLANGUAGES = ["No translate","spanish","english","german","basque","italian","russian"]
 SUPORTEDLANGUAGESSEAMLESS={"german":"deu","english":"eng","spanish":"spa","russian":"rus"}
+
 if os.path.isfile(BLOGFILE):
 	try:
 		from .blogs import blogs 
@@ -42,7 +45,6 @@ if os.path.isfile(BLOGFILE):
 		joinWebpage(BLOGSFILES,appblogs,app,url=BLOGWEBDIR)
 	except:
 		updateBlog(BLOGSFILES,BLOGFILE)
-
 #projects
 PROJECTSNAMEFILE="data/projects.txt"
 PROJECTSWEBDIR = "/projects/"

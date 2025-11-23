@@ -22,15 +22,21 @@ class webpage:
 		return render_template("index.html",projects=projects)
 
 	#def index():#change it with a map
+	"""
+	https://main.jero98772.page/blog/blogmenu.html
+	"""
+
 	@app.route(BLOGINDEX)
 	def blogmain():
 		session["author"] = AUTHOR
 		updateBlog(BLOGSFILES,BLOGFILE)
 		return render_template("config/bloglist.html", url= BLOGWEBDIR,topics = sorted(BLOGS), name = AUTHOR )
 
+
 	@app.route(BLOGWEBDIR+"/config.html")
 	def config():
 		return render_template("config/configmenu.html")
+		
 	@app.route(BLOGWEBDIR+"/add.html",methods=['POST','GET'])	
 	def add():
 		if not session.get("loged"):
@@ -151,5 +157,9 @@ class webpage:
 			msg =  "file removed are :"+deletemsg
 		return render_template("config/deleteFiles.html",blogs = BLOGS,msg = msg)
 
-	
+##### test webterminal
+
+	@app.route("/tmxhost.html")
+	def tmxhost():
+		return redirect("127.0.0.1")	
 

@@ -256,7 +256,7 @@ class alotrolado():
         return "<h1>please wait, my algoritm is very faster for this web</h1><script>setTimeout(function () {window.location.href = '/"+fileName+"';}, 1);</script>"
         return redirect(PROJECTSALOTROLADOWEBDIR+fileName)
   
-class noaa:
+class Noaa:
   @app.route(NOAAWEBDIR,methods=['GET','POST'])
   def indexnoaa():
       if not os.path.exists(NOAASAVESFOLDER):
@@ -339,7 +339,7 @@ class arrebato:
         msg = decryptRsa(inMsg,publicKey,n)
     return render_template(ARREBATOFOLDER+"rsa.html" ,out = msg,primes = primes,n = newN , private = privada, public = publica)
 
-  @app.route(ARREBATOWEBDIR+"hashs.html", methods=['GET','POST'])
+  @app.route(ARREBATOWEBDIR+"sha256.html", methods=['GET','POST'])
   def criptoolshash():
     msg = ""
     if request.method == 'POST':

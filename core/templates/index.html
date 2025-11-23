@@ -1,20 +1,72 @@
 {% extends 'template.html' %}
 {% block content %}
-<!-- ======= Hero Section ======= -->
-<section id="index" class="hero d-flex align-items-center section-bg">
-    <div class="container">
-        <!-- Hero content goes here if needed -->
-    </div>
-</section><!-- End Hero Section -->
+
 <style>
     .table-header {
         color: #00FF00; /* Green color */
     }
+        /* Center the cards and set fixed image dimensions */
+    .card {
+        margin: 0 auto;
+        max-width: 300px; /* Adjust the width as needed */
+    }
+    .card img {
+        width: 100%;
+        height: 200px; /* Adjust the height as needed */
+        object-fit: cover;
+    }
 </style>
 
 <main id="main">
+
+    <!--me-->
+
+
     <!-- ======= About Section ======= -->
+    
     <section id="projects" class="about">
+        <h1>My Winner  Projects</h1>
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-6">
+                <div class="card bg-dark">
+                    <a href="https://www.youtube.com/watch?v=f4UW539DhlQ"><img src="https://raw.githubusercontent.com/jero98772/AlOtroLado/main/misc/img/video.png" class="card-img-top" alt="Project 1 Image"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">AlOtroLado</h5>
+                        <p class="card-text">A program to determine the shortest route considering both danger and distance in Medellin.</p>
+                        <a href="https://github.com/jero98772/AlOtroLado" class="btn btn-primary" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-6">
+                <div class="card bg-dark">
+                    <img src="https://raw.githubusercontent.com/jero98772/AcuaDom/main/docs/images/acuarium1.jpeg" class="card-img-top" alt="Project 2 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">AcuaDom</h5>
+                        <p class="card-text">Domotic Fishtank with Bluetooth and web control with multiple sensors.</p>
+                        <a href="https://github.com/yourusername/AcuaDom" class="btn btn-primary" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+            <br>
+             <!-- Project 3 -->
+            <div class="col-md-6">
+                <div class="card bg-dark">
+                    <a href="https://www.youtube.com/watch?v=YUgIStrgesU"><img src="https://raw.githubusercontent.com/FICAARO/Acuatech/refs/heads/main/docs/screenshots/6.png" class="card-img-top" alt="Project 1 Image"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Acuatech</h5>
+                        <p class="card-text">A Online set of tools for fishes inside a fish online shop </p>
+                        <a href="https://github.com/FICAARO/Acuatech" class="btn btn-primary" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <h2>Projects to use in this webpage</h2>
         <div class="container" data-aos="fade-up">
             <table class="table">
                 <thead>
@@ -29,12 +81,14 @@
                     <tr>
                         <th scope="row">{{ loop.index }}</th>
                         <td><a href="/projects/{{ i }}">{{ i }}</a></td>
-                        <td><a href="https://github.com/jero98772/{{ i }}">github</a></td>
+                        <td><a href="https://github.com/jero98772/{{ i }}">Github</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
         </div>
     </section><!-- End About Section -->
+
+
 </main>
 {% endblock %}
