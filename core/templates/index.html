@@ -5,7 +5,7 @@
     .table-header {
         color: #00FF00; /* Green color */
     }
-        /* Center the cards and set fixed image dimensions */
+    /* Center the cards and set fixed image dimensions */
     .card {
         margin: 0 auto;
         max-width: 300px; /* Adjust the width as needed */
@@ -15,65 +15,204 @@
         height: 200px; /* Adjust the height as needed */
         object-fit: cover;
     }
+    /* Iframe styling */
+    .canvas-iframe {
+        width: 100%;
+        height: 600px;
+        border: 2px solid #00FF00;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+    /* Talks section styling */
+    .talks-card {
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .talks-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .talks-card img:hover {
+        transform: scale(1.05);
+    }
 </style>
 
 <main id="main">
 
-    <!--me-->
-
-
-    <!-- ======= About Section ======= -->
-    
+    <!-- ======= Winner Projects Section ======= -->
     <section id="projects" class="about">
-        <h1>My Winner  Projects</h1>
-    <div class="container mt-4">
-        <div class="row">
-            <!-- Project 1 -->
-            <div class="col-md-6">
-                <div class="card bg-dark">
-                    <a href="https://www.youtube.com/watch?v=f4UW539DhlQ"><img src="https://raw.githubusercontent.com/jero98772/AlOtroLado/main/misc/img/video.png" class="card-img-top" alt="Project 1 Image"></a>
-                    <div class="card-body">
-                        <h5 class="card-title">AlOtroLado</h5>
-                        <p class="card-text">A program to determine the shortest route considering both danger and distance in Medellin.</p>
-                        <a href="https://github.com/jero98772/AlOtroLado" class="btn btn-primary" target="_blank">GitHub Repo</a>
+        <h1>My Winner Projects</h1>
+        <div class="container mt-4">
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-6">
+                    <div class="card bg-dark">
+                        <a href="https://www.youtube.com/watch?v=f4UW539DhlQ"><img src="https://raw.githubusercontent.com/jero98772/AlOtroLado/main/misc/img/video.png" class="card-img-top" alt="Project 1 Image"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">AlOtroLado</h5>
+                            <p class="card-text">A program to determine the shortest route considering both danger and distance in Medellin.</p>
+                            <a href="https://github.com/jero98772/AlOtroLado" class="btn btn-primary" target="_blank">GitHub Repo</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Project 2 -->
-            <div class="col-md-6">
-                <div class="card bg-dark">
-                    <img src="https://raw.githubusercontent.com/jero98772/AcuaDom/main/docs/images/acuarium1.jpeg" class="card-img-top" alt="Project 2 Image">
-                    <div class="card-body">
-                        <h5 class="card-title">AcuaDom</h5>
-                        <p class="card-text">Domotic Fishtank with Bluetooth and web control with multiple sensors.</p>
-                        <a href="https://github.com/yourusername/AcuaDom" class="btn btn-primary" target="_blank">GitHub Repo</a>
+                <!-- Project 2 -->
+                <div class="col-md-6">
+                    <div class="card bg-dark">
+                        <img src="https://raw.githubusercontent.com/jero98772/AcuaDom/main/docs/images/acuarium1.jpeg" class="card-img-top" alt="Project 2 Image">
+                        <div class="card-body">
+                            <h5 class="card-title">AcuaDom</h5>
+                            <p class="card-text">Domotic Fishtank with Bluetooth and web control with multiple sensors.</p>
+                            <a href="https://github.com/yourusername/AcuaDom" class="btn btn-primary" target="_blank">GitHub Repo</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <br>
-             <!-- Project 3 -->
-            <div class="col-md-6">
-                <div class="card bg-dark">
-                    <a href="https://www.youtube.com/watch?v=YUgIStrgesU"><img src="https://raw.githubusercontent.com/FICAARO/Acuatech/refs/heads/main/docs/screenshots/6.png" class="card-img-top" alt="Project 1 Image"></a>
-                    <div class="card-body">
-                        <h5 class="card-title">Acuatech</h5>
-                        <p class="card-text">A Online set of tools for fishes inside a fish online shop </p>
-                        <a href="https://github.com/FICAARO/Acuatech" class="btn btn-primary" target="_blank">GitHub Repo</a>
+                <br>
+                <!-- Project 3 -->
+                <div class="col-md-6">
+                    <div class="card bg-dark">
+                        <a href="https://www.youtube.com/watch?v=YUgIStrgesU"><img src="https://raw.githubusercontent.com/FICAARO/Acuatech/refs/heads/main/docs/screenshots/6.png" class="card-img-top" alt="Project 1 Image"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Acuatech</h5>
+                            <p class="card-text">A Online set of tools for fishes inside a fish online shop</p>
+                            <a href="https://github.com/FICAARO/Acuatech" class="btn btn-primary" target="_blank">GitHub Repo</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
+    <!-- ======= Talks Section ======= -->
+<section id="talks" class="about mt-5">
+    <h1>My Talks & Presentations</h1>
+    <div class="container mt-4">
+        <div class="row">
+
+            <!-- Talk 1 -->
+            <div class="col-md-6">
+                <div class="card bg-dark talks-card">
+                    <a href="https://inv.perditum.com/embed/3cBjVaYTUSE?" target="_blank">
+                        <img src="https://github.com/jero98772/TMPland/blob/main/core/static/img/speechs/2.jpeg?raw=1"
+                             class="card-img-top" alt="Talk 1 Thumbnail">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">How to Make a Programming Language in Russian and German</h5>
+                        <p class="card-text">A talk explaining how to design a multilingual programming language supporting Russian and German.</p>
+                        <a href="https://inv.perditum.com/embed/3cBjVaYTUSE?" class="btn btn-danger" target="_blank">
+                            <i class="bi bi-youtube"></i> Watch
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Talk 2 -->
+            <div class="col-md-6">
+                <div class="card bg-dark talks-card">
+                    <a href="https://www.youtube.com/watch?v=umYXhuEEcio" target="_blank">
+                        <img src="https://github.com/jero98772/TMPland/blob/main/core/static/img/speechs/3.jpeg?raw=1"
+                             class="card-img-top" alt="Talk 2 Thumbnail">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">How to Make a Telegram Bot in Python with AI</h5>
+                        <p class="card-text">Learn to build a Telegram chatbot in Python that uses AI to improve productivity.</p>
+                        <a href="https://www.youtube.com/watch?v=umYXhuEEcio" class="btn btn-danger" target="_blank">
+                            <i class="bi bi-youtube"></i> Watch on YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Talk 3 -->
+            <div class="col-md-6">
+                <div class="card bg-dark talks-card">
+                    <a href="https://www.youtube.com/watch?v=csh_6YYBd0w&t=12" target="_blank">
+                        <img src="https://github.com/jero98772/TMPland/blob/main/core/static/img/speechs/4.jpeg?raw=1"
+                             class="card-img-top" alt="Talk 3 Thumbnail">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Why Not Combine Python with C, C++, Java, Rust? And How?</h5>
+                        <p class="card-text">A technical explanation on mixing Python with compiled languages for performance and flexibility.</p>
+                        <a href="https://www.youtube.com/watch?v=csh_6YYBd0w&t=12" class="btn btn-danger" target="_blank">
+                            <i class="bi bi-youtube"></i> Watch on YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Talk 4 -->
+            <div class="col-md-6">
+                <div class="card bg-dark talks-card">
+                    <a href="https://www.youtube.com/watch?v=uB5MW5nkMak" target="_blank">
+                        <img src="https://github.com/jero98772/TMPland/blob/main/core/static/img/speechs/5.jpeg?raw=1"
+                             class="card-img-top" alt="Talk 4 Thumbnail">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">How to Create Maps with Python and JS</h5>
+                        <p class="card-text">A workshop on generating interactive maps combining Python data processing and JavaScript visualization.</p>
+                        <a href="https://www.youtube.com/watch?v=uB5MW5nkMak" class="btn btn-danger" target="_blank">
+                            <i class="bi bi-youtube"></i> Watch on YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Talk 5 -->
+            <div class="col-md-6">
+                <div class="card bg-dark talks-card">
+                    <a href="https://www.youtube.com/watch?v=uhf8w-wcWxU" target="_blank">
+                        <img src="https://github.com/jero98772/TMPland/blob/main/core/static/img/speechs/6.jpeg?raw=1"
+                             class="card-img-top" alt="Talk 5 Thumbnail">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">From Your Blood to Python: A Bioinformatics Talk for Programmers</h5>
+                        <p class="card-text">An introduction to bioinformatics showing how biological data can be analyzed with Python.</p>
+                        <a href="https://www.youtube.com/watch?v=uhf8w-wcWxU" class="btn btn-danger" target="_blank">
+                            <i class="bi bi-youtube"></i> Watch on YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ======= Interactive Canvas Section ======= -->
+    <section id="canvas" class="about mt-5">
+        <h1>Interactive Museum of my proyects</h1>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <iframe 
+                        class="canvas-iframe" 
+                        src="https://main.jero98772.page/museum.html" 
+                        title="Interactive Canvas Demo"
+                        allowfullscreen>
+                    </iframe>
+                    <p class="text-center mt-3">
+                        <a href="https://main.jero98772.page/museum.html" target="_blank" class="btn btn-success">
+                            Open in New Tab
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= Projects Table Section ======= -->
+    <section id="all-projects" class="about mt-5">
         <h2>Projects to use in this webpage</h2>
         <div class="container" data-aos="fade-up">
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col" class="table-header"> # </th>
-                        <th scope="col" class="table-header"> Name </th>
-                        <th scope="col" class="table-header"> Code </th>
+                        <th scope="col" class="table-header">#</th>
+                        <th scope="col" class="table-header">Name</th>
+                        <th scope="col" class="table-header">Code</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -87,8 +226,7 @@
                 </tbody>
             </table>
         </div>
-    </section><!-- End About Section -->
-
+    </section>
 
 </main>
 {% endblock %}

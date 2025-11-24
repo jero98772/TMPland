@@ -36,7 +36,8 @@ class webpage:
 	@app.route(BLOGWEBDIR+"/config.html")
 	def config():
 		return render_template("config/configmenu.html")
-		
+
+
 	@app.route(BLOGWEBDIR+"/add.html",methods=['POST','GET'])	
 	def add():
 		if not session.get("loged"):
@@ -163,3 +164,7 @@ class webpage:
 	def tmxhost():
 		return redirect("127.0.0.1")	
 
+	@app.route("/museum.html")
+	def museum():
+		return render_template("museum.html")
+		
